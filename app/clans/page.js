@@ -1,5 +1,5 @@
 import { supabase } from "../../lib/supabase";
-import ClanCards from "../components/ClanCards";
+import ClanCard from "../components/ClanCard";
 
 export default async function ClansPage() {
   const { data: clans } = await supabase.from("clans").select("*");
@@ -10,7 +10,7 @@ export default async function ClansPage() {
 
       <div style={{ display: "grid", gap: "15px", marginTop: "20px" }}>
         {clans?.map((c) => (
-          <ClanCards key={c.id} clan={c} />
+          <ClanCard key={c.id} clan={c} />
         ))}
       </div>
     </div>
