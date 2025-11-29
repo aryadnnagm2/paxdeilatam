@@ -10,7 +10,7 @@ export default async function ClansPage() {
 
       <div style={{ display: "grid", gap: "15px", marginTop: "20px" }}>
         {clans?.map((c) => (
-          <ClanCard key={c.id} clan={c} />
+          <ClanCards key={c.id} clan={c} />
         ))}
       </div>
     </div>
