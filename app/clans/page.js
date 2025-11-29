@@ -1,5 +1,5 @@
 import { supabase } from "../../lib/supabase";
-import ClanCard from "../components/ClanCard";
+import ClanCard from "../components/ClanCard.js";
 
 export default async function ClansPage() {
   const { data: clans } = await supabase.from("clans").select("*");
